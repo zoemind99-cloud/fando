@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/articles", "destination": "/articles.html" },
+    { "source": "/creators", "destination": "/creators.html" },
+    { "source": "/partners", "destination": "/partners.html" },
+    { "source": "/design-system", "destination": "/design-system/index.html" },
+    { "source": "/design-system/tokens", "destination": "/design-system/tokens/index.html" },
+    { "source": "/design-system/components", "destination": "/design-system/components/index.html" },
+    { "source": "/design-system/figma", "destination": "/design-system/figma/index.html" }
+  ]
+}

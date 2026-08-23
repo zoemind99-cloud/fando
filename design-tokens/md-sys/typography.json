@@ -1,0 +1,29 @@
+{
+  "md-sys": {
+    "typescale": {
+      "display": {
+        "large": { "$value": "700 3.5rem/4rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "medium": { "$value": "700 2.75rem/3.25rem \"Noto Sans TC\", sans-serif", "$type": "typography" }
+      },
+      "headline": {
+        "large": { "$value": "700 2rem/2.5rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "medium": { "$value": "600 1.75rem/2.25rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "small": { "$value": "600 1.5rem/2rem \"Noto Sans TC\", sans-serif", "$type": "typography" }
+      },
+      "title": {
+        "large": { "$value": "600 1.375rem/1.75rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "medium": { "$value": "600 1rem/1.5rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "small": { "$value": "600 0.875rem/1.25rem \"Noto Sans TC\", sans-serif", "$type": "typography" }
+      },
+      "body": {
+        "large": { "$value": "400 1rem/1.5rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "medium": { "$value": "400 0.875rem/1.25rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "small": { "$value": "400 0.75rem/1rem \"Noto Sans TC\", sans-serif", "$type": "typography" }
+      },
+      "label": {
+        "large": { "$value": "600 0.875rem/1.25rem \"Noto Sans TC\", sans-serif", "$type": "typography" },
+        "medium": { "$value": "600 0.75rem/1rem \"Noto Sans TC\", sans-serif", "$type": "typography" }
+      }
+    }
+  }
+}

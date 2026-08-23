@@ -1,0 +1,99 @@
+---
+layout: ds-layout.njk
+title: Design Tokens
+description: 由 design-tokens/ 自動產生的 Material Design 3 token。設計師在 Figma 修改後匯出 JSON 即可同步。
+page:
+  id: tokens
+permalink: tokens/index.html
+---
+{% from "ds-sync.njk" import renderTokenSync %}
+
+{{ renderTokenSync() }}
+
+<section class="ds-section" id="colors-fandor">
+  <h2 class="ds-section__title">FANDOR 品牌色</h2>
+  <p class="ds-section__desc">原始 palette，語意色會引用這些值。</p>
+  <div class="ds-swatch-grid">
+    {% for token in tokens.fandor %}
+    <div class="ds-swatch">
+      <div class="ds-swatch__chip" style="background: var(--{{ token.name }})"></div>
+      <div class="ds-swatch__meta">
+        <code class="ds-swatch__name">--{{ token.name }}</code>
+        <span class="ds-swatch__value">{{ token.value }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ds-section" id="colors-semantic">
+  <h2 class="ds-section__title">MD3 語意色</h2>
+  <div class="ds-swatch-grid">
+    {% for token in tokens.semantic %}
+    <div class="ds-swatch">
+      <div class="ds-swatch__chip" style="background: var(--{{ token.name }})"></div>
+      <div class="ds-swatch__meta">
+        <code class="ds-swatch__name">--{{ token.name }}</code>
+        <span class="ds-swatch__value">{{ token.value }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ds-section" id="typography">
+  <h2 class="ds-section__title">Typography</h2>
+  <div class="ds-type-list">
+    {% for token in tokens.typography %}
+    <div class="ds-type-row">
+      <div class="ds-type-row__sample" style="font: var(--{{ token.name }})">
+        創作者銷售平台 FANDOR
+      </div>
+      <div class="ds-type-row__meta">
+        <code>--{{ token.name }}</code>
+        <span>{{ token.value }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ds-section" id="shape">
+  <h2 class="ds-section__title">Shape（圓角）</h2>
+  <div class="ds-shape-grid">
+    {% for token in tokens.shape %}
+    <div class="ds-shape">
+      <div class="ds-shape__box" style="border-radius: var(--{{ token.name }})"></div>
+      <code>--{{ token.name }}</code>
+      <span>{{ token.value }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ds-section" id="spacing">
+  <h2 class="ds-section__title">Spacing & Layout</h2>
+  <div class="ds-spacing-list">
+    {% for token in tokens.layout %}
+    <div class="ds-spacing-row">
+      <code>--{{ token.name }}</code>
+      {% if 'spacing' in token.name %}
+      <div class="ds-spacing-row__bar" style="width: var(--{{ token.name }})"></div>
+      {% endif %}
+      <span>{{ token.value }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ds-section" id="motion">
+  <h2 class="ds-section__title">Motion</h2>
+  <ul class="ds-token-list">
+    {% for token in tokens.motion %}
+    <li>
+      <code>--{{ token.name }}</code>
+      <span>{{ token.value }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,26 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__grid">
+    <div class="hero__content">
+      {% if block.eyebrow %}<p class="section__eyebrow">{{ block.eyebrow }}</p>{% endif %}
+      <h1 id="hero-title" class="hero__title">{{ block.title | richText | safe }}</h1>
+      {% if block.description %}<p class="section__desc">{{ block.description }}</p>{% endif %}
+      {% if block.actions %}
+      <div class="hero__actions">
+        {% for action in block.actions %}
+        <a href="{{ action.href }}" class="btn {{ action.variant | btnClass }} btn--large">{{ action.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if block.social %}
+      <div class="social-links" aria-label="社群連結">
+        {% for link in block.social %}
+        <a href="{{ link.href }}" aria-label="{{ link.label }}"><span class="material-symbols-outlined">{{ link.network | socialIcon }}</span></a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    <div class="hero__media">
+      <img src="{{ block.image }}" alt="{{ block.imageAlt | default('') }}" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+logo: /public/images/9b7dee20-3ed5-4c0e-b1e2-aa1c324e60d0.png
+logoAlt: WLAND FANDOR MEDIA
+links:
+  - href: /about
+    label: 關於我們
+    id: about
+  - href: /articles
+    label: 文章分享
+    id: articles
+  - href: /creators
+    label: 創作者專區
+    id: creators
+  - href: /partners
+    label: 品牌商合作
+    id: partners
+cta:
+  label: 立即加入
+  href: /creators#join

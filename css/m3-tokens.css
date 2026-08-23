@@ -1,0 +1,90 @@
+/**
+ * AUTO-GENERATED — DO NOT EDIT
+ * Source: design-tokens/ (edit via Figma Tokens Studio export)
+ * Rebuild: npm run tokens:build
+ */
+:root {
+  /* FANDOR raw palette (oklch) */
+  --fandor-primary-50: oklch(0.98 0.015 355);
+  --fandor-primary-100: oklch(0.96 0.03 355);
+  --fandor-primary-500: oklch(0.75 0.13 355);
+  --fandor-primary-600: oklch(0.65 0.12 355);
+  --fandor-primary-700: oklch(0.54 0.1 355);
+  --fandor-accent-500: oklch(0.68 0.24 125);
+  --fandor-accent-600: oklch(0.59 0.2 125);
+  --fandor-surface: oklch(0.99 0.004 355);
+  --fandor-surface-container: oklch(0.97 0.008 355);
+  --fandor-surface-container-high: oklch(0.94 0.015 355);
+  --fandor-navbar: oklch(0.93 0.05 68);
+  --fandor-on-surface: oklch(0.19 0.005 20);
+  --fandor-on-surface-variant: oklch(0.46 0.015 20);
+  --fandor-outline-variant: oklch(0.87 0.015 20);
+
+  /* MD3 sys color roles */
+  --md-sys-color-primary: var(--fandor-primary-600);
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: var(--fandor-primary-100);
+  --md-sys-color-on-primary-container: var(--fandor-primary-700);
+  --md-sys-color-secondary: var(--fandor-accent-600);
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: oklch(0.94 0.06 125);
+  --md-sys-color-on-secondary-container: oklch(0.33 0.09 125);
+  --md-sys-color-surface: var(--fandor-surface);
+  --md-sys-color-on-surface: var(--fandor-on-surface);
+  --md-sys-color-on-surface-variant: var(--fandor-on-surface-variant);
+  --md-sys-color-surface-container: var(--fandor-surface-container);
+  --md-sys-color-surface-container-high: var(--fandor-surface-container-high);
+  --md-sys-color-surface-container-highest: var(--fandor-navbar);
+  --md-sys-color-outline: oklch(0.67 0.02 20);
+  --md-sys-color-outline-variant: var(--fandor-outline-variant);
+  --md-sys-color-inverse-surface: var(--fandor-on-surface);
+  --md-sys-color-inverse-on-surface: var(--fandor-surface);
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+
+  /* MD3 shape */
+  --md-sys-shape-corner-none: 0;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* MD3 typography — Noto Sans TC (FANDOR brand font) */
+  --md-sys-typescale-display-large: 700 3.5rem/4rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-display-medium: 700 2.75rem/3.25rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-headline-large: 700 2rem/2.5rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-headline-medium: 600 1.75rem/2.25rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-headline-small: 600 1.5rem/2rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-title-large: 600 1.375rem/1.75rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-title-medium: 600 1rem/1.5rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-title-small: 600 0.875rem/1.25rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-body-large: 400 1rem/1.5rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-body-medium: 400 0.875rem/1.25rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-body-small: 400 0.75rem/1rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-label-large: 600 0.875rem/1.25rem "Noto Sans TC", sans-serif;
+  --md-sys-typescale-label-medium: 600 0.75rem/1rem "Noto Sans TC", sans-serif;
+
+  /* MD3 motion */
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-duration-medium: 250ms;
+
+  /* Layout */
+  --md-content-max-width: 1040px;
+  --md-spacing-1: 8px;
+  --md-spacing-2: 16px;
+  --md-spacing-3: 24px;
+  --md-spacing-4: 32px;
+  --md-spacing-5: 48px;
+  --md-spacing-6: 64px;
+  --md-top-app-bar-height: 64px;
+  --md-bottom-nav-height: 80px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

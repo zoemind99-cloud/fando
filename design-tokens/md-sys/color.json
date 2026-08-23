@@ -1,0 +1,26 @@
+{
+  "md-sys": {
+    "color": {
+      "primary": { "$value": "{fandor.primary.600}", "$type": "color" },
+      "on-primary": { "$value": "#ffffff", "$type": "color" },
+      "primary-container": { "$value": "{fandor.primary.100}", "$type": "color" },
+      "on-primary-container": { "$value": "{fandor.primary.700}", "$type": "color" },
+      "secondary": { "$value": "{fandor.accent.600}", "$type": "color" },
+      "on-secondary": { "$value": "#ffffff", "$type": "color" },
+      "secondary-container": { "$value": "oklch(0.94 0.06 125)", "$type": "color" },
+      "on-secondary-container": { "$value": "oklch(0.33 0.09 125)", "$type": "color" },
+      "surface": { "$value": "{fandor.surface}", "$type": "color" },
+      "on-surface": { "$value": "{fandor.on-surface}", "$type": "color" },
+      "on-surface-variant": { "$value": "{fandor.on-surface-variant}", "$type": "color" },
+      "surface-container": { "$value": "{fandor.surface-container}", "$type": "color" },
+      "surface-container-high": { "$value": "{fandor.surface-container-high}", "$type": "color" },
+      "surface-container-highest": { "$value": "{fandor.navbar}", "$type": "color" },
+      "outline": { "$value": "oklch(0.67 0.02 20)", "$type": "color" },
+      "outline-variant": { "$value": "{fandor.outline-variant}", "$type": "color" },
+      "inverse-surface": { "$value": "{fandor.on-surface}", "$type": "color" },
+      "inverse-on-surface": { "$value": "{fandor.surface}", "$type": "color" },
+      "error": { "$value": "#ba1a1a", "$type": "color" },
+      "on-error": { "$value": "#ffffff", "$type": "color" }
+    }
+  }
+}

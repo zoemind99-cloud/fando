@@ -1,0 +1,252 @@
+{% macro render(comp) %}
+  {% if comp.id == 'btn' %}
+  <div class="ds-preview">
+    <div class="ds-preview__row">
+      <a href="#" class="btn btn--filled" onclick="return false">Filled</a>
+      <a href="#" class="btn btn--outlined" onclick="return false">Outlined</a>
+      <a href="#" class="btn btn--text" onclick="return false">Text</a>
+      <a href="#" class="btn btn--filled btn--large" onclick="return false">Large</a>
+    </div>
+    <div class="ds-preview__row ds-preview__row--primary">
+      <a href="#" class="btn btn--on-primary btn--large" onclick="return false">On Primary</a>
+      <a href="#" class="btn btn--on-primary-outline btn--large" onclick="return false">On Primary Outline</a>
+    </div>
+  </div>
+
+  {% elif comp.id == 'icon-btn' %}
+  <div class="ds-preview">
+    <button type="button" class="icon-btn" aria-label="menu"><span class="material-symbols-outlined">menu</span></button>
+    <button type="button" class="icon-btn" aria-label="close"><span class="material-symbols-outlined">close</span></button>
+  </div>
+
+  {% elif comp.id == 'chip' %}
+  <div class="ds-preview">
+    <button type="button" class="kol-chip kol-chip--active">美食烹飪</button>
+    <button type="button" class="kol-chip">旅遊</button>
+    <button type="button" class="kol-chip">美妝保養</button>
+  </div>
+
+  {% elif comp.id == 'top-app-bar' %}
+  <div class="ds-preview ds-preview--frame">
+    <header class="top-app-bar top-app-bar--scrolled" role="banner">
+      <div class="top-app-bar__inner">
+        <a href="#" class="top-app-bar__logo" onclick="return false"><img src="/public/images/9b7dee20-3ed5-4c0e-b1e2-aa1c324e60d0.png" alt="FANDOR" /></a>
+        <nav class="top-app-bar__nav" aria-label="主要導航">
+          <a href="#" class="top-app-bar__link top-app-bar__link--active" onclick="return false">關於我們</a>
+          <a href="#" class="top-app-bar__link" onclick="return false">文章分享</a>
+          <a href="#" class="top-app-bar__link" onclick="return false">創作者專區</a>
+        </nav>
+        <div class="top-app-bar__actions">
+          <a href="#" class="btn btn--filled" onclick="return false">立即加入</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  {% elif comp.id == 'drawer' %}
+  <div class="ds-preview ds-preview--frame ds-preview--drawer">
+    <nav class="drawer drawer--open" aria-label="行動版選單" style="position:relative;transform:none;width:280px;height:320px">
+      <a href="#" class="drawer__link drawer__link--active" onclick="return false">關於我們</a>
+      <a href="#" class="drawer__link" onclick="return false">文章分享</a>
+      <a href="#" class="drawer__link" onclick="return false">創作者專區</a>
+      <a href="#" class="btn btn--filled btn--large" style="margin-top:12px" onclick="return false">立即加入</a>
+    </nav>
+  </div>
+
+  {% elif comp.id == 'footer' %}
+  <div class="ds-preview ds-preview--frame">
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__grid">
+        <div>
+          <div class="footer__logo"><img src="/public/images/9b7dee20-3ed5-4c0e-b1e2-aa1c324e60d0.png" alt="FANDOR" /></div>
+          <p class="footer__tagline">讓每一位創作者，都能輕鬆開團變現。</p>
+          <p class="footer__meta">故事行銷顧問股份有限公司<br />統編 93488152</p>
+        </div>
+        <div>
+          <h3 class="footer__heading">快速連結</h3>
+          <ul class="footer__links"><li><a href="#">首頁</a></li><li><a href="#">關於我們</a></li></ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">聯絡我們</h3>
+          <ul class="footer__links"><li><a href="#">hello@fandor.co</a></li></ul>
+        </div>
+      </div>
+      <div class="container footer__bottom">© 2026 FANDOR. All rights reserved.</div>
+    </footer>
+  </div>
+
+  {% elif comp.id == 'section-header' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="section__header">
+      <p class="section__eyebrow">平台優勢</p>
+      <h2 class="section__title">為什麼選擇 FANDOR？</h2>
+      <p class="section__desc">我們專注打造最適合創作者的團購生態系</p>
+    </div>
+  </div>
+
+  {% elif comp.id == 'feature-card' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="feature-grid" style="grid-template-columns:1fr;max-width:360px">
+      <article class="feature-card">
+        <div class="feature-card__icon"><span class="material-symbols-outlined">payments</span></div>
+        <h3 class="feature-card__title">創作者長期變現</h3>
+        <p class="feature-card__desc">透過 FANDOR 平台，創作者能建立穩定的被動收入來源。</p>
+      </article>
+    </div>
+  </div>
+
+  {% elif comp.id == 'problem-card' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="problem-grid" style="grid-template-columns:repeat(2,1fr);max-width:480px">
+      <article class="problem-card">
+        <h3 class="problem-card__q">怎麼找？</h3>
+        <p class="problem-card__a">什麼樣的網紅<br />適合你的品牌</p>
+      </article>
+      <article class="problem-card">
+        <h3 class="problem-card__q">怎麼選？</h3>
+        <p class="problem-card__a">怎麼知道是<br />帶貨型網紅？</p>
+      </article>
+    </div>
+  </div>
+
+  {% elif comp.id == 'stat' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="stats-band" style="border-radius:var(--md-sys-shape-corner-large);padding:var(--md-spacing-3)">
+      <div class="stat-grid" style="grid-template-columns:repeat(3,1fr);gap:var(--md-spacing-2)">
+        <div class="stat-item"><p class="stat-item__value">500+</p><p class="stat-item__label">合作創作者</p></div>
+        <div class="stat-item"><p class="stat-item__value">10萬+</p><p class="stat-item__label">訂單</p></div>
+        <div class="stat-item"><p class="stat-item__value">3</p><p class="stat-item__label">服務地區</p></div>
+      </div>
+    </div>
+  </div>
+
+  {% elif comp.id == 'hero' %}
+  <div class="ds-preview ds-preview--frame">
+    <section class="hero" style="padding:var(--md-spacing-3)">
+      <div class="hero__grid">
+        <div class="hero__content">
+          <p class="section__eyebrow">創作者銷售平台</p>
+          <h2 class="hero__title" style="font-size:1.5rem">以<span class="accent">創作者</span>影響力驅動品牌商曝光</h2>
+          <div class="hero__actions">
+            <a href="#" class="btn btn--filled" onclick="return false">創作者加入 →</a>
+          </div>
+        </div>
+        <div class="hero__media"><img src="/public/images/hero-pink-02.jpg" alt="" style="max-height:200px;object-fit:cover;border-radius:var(--md-sys-shape-corner-large)" /></div>
+      </div>
+    </section>
+  </div>
+
+  {% elif comp.id == 'page-hero' %}
+  <div class="ds-preview ds-preview--frame">
+    <section class="page-hero">
+      <div class="container">
+        <p class="section__eyebrow">創作者專區</p>
+        <h2 class="page-hero__title">你的創作，值得被看見</h2>
+        <p class="section__desc">FANDOR 讓創作者從內容到變現無縫銜接</p>
+      </div>
+    </section>
+  </div>
+
+  {% elif comp.id == 'cta-banner' %}
+  <div class="ds-preview ds-preview--pad section--primary" style="padding:var(--md-spacing-4)">
+    <div class="cta-banner">
+      <h2 class="cta-banner__title">準備好開始你的銷售之旅了嗎？</h2>
+      <p class="cta-banner__desc">加入 FANDOR，與 500+ 創作者一起</p>
+      <div class="cta-banner__actions">
+        <a href="#" class="btn btn--on-primary" onclick="return false">成為合作創作者 →</a>
+      </div>
+    </div>
+  </div>
+
+  {% elif comp.id == 'split' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="split" style="grid-template-columns:1fr 1fr;gap:var(--md-spacing-3);max-width:720px">
+      <div class="split__media"><img src="/public/images/creator-monetize-01.jpg" alt="" style="height:200px;object-fit:cover;border-radius:var(--md-sys-shape-corner-large)" /></div>
+      <div class="split__copy">
+        <p class="section__eyebrow">長期變現</p>
+        <h3 class="section__title" style="font-size:1.25rem">建立你的長期變現管道</h3>
+        <p class="section__desc" style="font-size:0.875rem">一次開團可以持續帶來收入。</p>
+      </div>
+    </div>
+  </div>
+
+  {% elif comp.id == 'form-field' %}
+  <div class="ds-preview ds-preview--pad" style="max-width:480px">
+    <div class="form-grid">
+      <div class="field">
+        <label for="ds-name">姓名 <span class="field-required"></span></label>
+        <input id="ds-name" type="text" placeholder="請輸入姓名" />
+      </div>
+      <div class="field">
+        <label for="ds-email">Email</label>
+        <input id="ds-email" type="email" placeholder="name@example.com" />
+      </div>
+      <div class="field field--full">
+        <label for="ds-bio">自介</label>
+        <textarea id="ds-bio" placeholder="簡單介紹你的創作風格…"></textarea>
+      </div>
+    </div>
+  </div>
+
+  {% elif comp.id == 'feature-grid' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="feature-grid" style="grid-template-columns:repeat(3,1fr);gap:var(--md-spacing-2)">
+      <article class="feature-card">
+        <div class="feature-card__icon"><span class="material-symbols-outlined">payments</span></div>
+        <h3 class="feature-card__title">長期變現</h3>
+        <p class="feature-card__desc">穩定被動收入</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-card__icon"><span class="material-symbols-outlined">shopping_bag</span></div>
+        <h3 class="feature-card__title">眾多商品</h3>
+        <p class="feature-card__desc">百樣優質選擇</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-card__icon"><span class="material-symbols-outlined">handshake</span></div>
+        <h3 class="feature-card__title">媒合平台</h3>
+        <p class="feature-card__desc">創作者 × 廠商</p>
+      </article>
+    </div>
+  </div>
+
+  {% elif comp.id == 'problem-grid' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="problem-grid" style="grid-template-columns:repeat(4,1fr);gap:var(--md-spacing-2)">
+      <article class="problem-card"><h3 class="problem-card__q">怎麼找？</h3><p class="problem-card__a">適合的網紅</p></article>
+      <article class="problem-card"><h3 class="problem-card__q">怎麼選？</h3><p class="problem-card__a">帶貨型網紅</p></article>
+      <article class="problem-card"><h3 class="problem-card__q">怎麼談？</h3><p class="problem-card__a">分潤費用</p></article>
+      <article class="problem-card"><h3 class="problem-card__q">成效如何？</h3><p class="problem-card__a">評估帶貨</p></article>
+    </div>
+  </div>
+
+  {% elif comp.id == 'kol-carousel' %}
+  <div class="ds-preview ds-preview--pad">
+    <div class="kol-scroll" style="display:flex;gap:12px;overflow:hidden">
+      <article class="kol-card" style="flex:0 0 140px;height:200px">
+        <img src="/public/images/creator-food-01.jpg" alt="" />
+        <div class="kol-card__label">美食烹飪</div>
+      </article>
+      <article class="kol-card" style="flex:0 0 140px;height:200px">
+        <img src="/public/images/creator-travel-01.jpg" alt="" />
+        <div class="kol-card__label">旅遊</div>
+      </article>
+      <article class="kol-card" style="flex:0 0 140px;height:200px">
+        <img src="/public/images/creator-beauty-01.jpg" alt="" />
+        <div class="kol-card__label">美妝保養</div>
+      </article>
+    </div>
+    <div class="kol-chips-wrap" style="margin-top:12px">
+      <div class="kol-chips">
+        <button type="button" class="kol-chip kol-chip--active">美食烹飪</button>
+        <button type="button" class="kol-chip">旅遊</button>
+        <button type="button" class="kol-chip">美妝保養</button>
+      </div>
+    </div>
+  </div>
+
+  {% else %}
+  <div class="ds-preview ds-preview--empty">
+    <p>預覽即將加入 · 目前請參考官網頁面</p>
+  </div>
+  {% endif %}
+{% endmacro %}

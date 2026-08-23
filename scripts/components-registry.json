@@ -1,0 +1,260 @@
+{
+  "version": 1,
+  "figmaFile": "https://www.figma.com/design/vf6dAa86dPRC1Y3IJcMOZO/FANDOR-Design-System",
+  "figmaConfig": "scripts/figma-config.json",
+  "figmaSyncSkill": "/figma-sync",
+  "categories": [
+    {
+      "id": "actions",
+      "label": "Actions",
+      "description": "按鈕、晶片等互動元件"
+    },
+    {
+      "id": "navigation",
+      "label": "Navigation",
+      "description": "導航列、Drawer、Footer"
+    },
+    {
+      "id": "content",
+      "label": "Content",
+      "description": "區塊標題、卡片、統計"
+    },
+    {
+      "id": "media",
+      "label": "Media",
+      "description": "Hero、Split、CTA"
+    },
+    {
+      "id": "forms",
+      "label": "Forms",
+      "description": "表單欄位"
+    },
+    {
+      "id": "blocks",
+      "label": "Page Blocks",
+      "description": "CMS 可組合的頁面區塊"
+    }
+  ],
+  "components": [
+    {
+      "id": "btn",
+      "name": "Button",
+      "category": "actions",
+      "description": "MD3 按鈕，支援 filled / outlined / text 等 variant",
+      "variants": ["filled", "outlined", "text", "on-primary", "on-primary-outline"],
+      "sizes": ["default", "large"],
+      "cssClasses": ["btn", "btn--filled", "btn--outlined", "btn--text", "btn--on-primary", "btn--on-primary-outline", "btn--large"],
+      "figmaComponent": "Actions / Button",
+      "usedOn": ["/", "/about", "/creators", "/partners"]
+    },
+    {
+      "id": "icon-btn",
+      "name": "Icon Button",
+      "category": "actions",
+      "description": "圖示按鈕，用於選單、輪播控制",
+      "variants": ["default"],
+      "cssClasses": ["icon-btn"],
+      "figmaComponent": "Actions / Icon Button",
+      "usedOn": ["/"]
+    },
+    {
+      "id": "chip",
+      "name": "Filter Chip",
+      "category": "actions",
+      "description": "KOL 類別篩選晶片",
+      "variants": ["default", "active"],
+      "cssClasses": ["kol-chip", "kol-chip--active"],
+      "figmaComponent": "Actions / Filter Chip",
+      "usedOn": ["/"]
+    },
+    {
+      "id": "top-app-bar",
+      "name": "Top App Bar",
+      "category": "navigation",
+      "description": "全站固定導航列，含 scroll shadow",
+      "variants": ["default", "scrolled"],
+      "cssClasses": ["top-app-bar", "top-app-bar--scrolled"],
+      "source": "js/site.js",
+      "figmaComponent": "Navigation / Top App Bar",
+      "usedOn": ["*"]
+    },
+    {
+      "id": "drawer",
+      "name": "Navigation Drawer",
+      "category": "navigation",
+      "description": "行動版側邊選單",
+      "variants": ["closed", "open"],
+      "cssClasses": ["drawer", "drawer--open"],
+      "figmaComponent": "Navigation / Drawer",
+      "usedOn": ["*"]
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "category": "navigation",
+      "description": "全站頁尾三欄布局",
+      "variants": ["default"],
+      "cssClasses": ["footer"],
+      "source": "js/site.js",
+      "figmaComponent": "Navigation / Footer",
+      "usedOn": ["*"]
+    },
+    {
+      "id": "section-header",
+      "name": "Section Header",
+      "category": "content",
+      "description": "Eyebrow + Title + Description 區塊標題",
+      "variants": ["default", "on-primary"],
+      "cssClasses": ["section__header", "section__eyebrow", "section__title", "section__desc"],
+      "figmaComponent": "Content / Section Header",
+      "usedOn": ["/", "/about", "/creators", "/partners"]
+    },
+    {
+      "id": "feature-card",
+      "name": "Feature Card",
+      "category": "content",
+      "description": "圖示 + 標題 + 說明的優勢卡片",
+      "variants": ["default"],
+      "cssClasses": ["feature-card"],
+      "figmaComponent": "Content / Feature Card",
+      "usedOn": ["/", "/partners"]
+    },
+    {
+      "id": "problem-card",
+      "name": "Problem Card",
+      "category": "content",
+      "description": "痛點 Q&A 卡片",
+      "variants": ["default"],
+      "cssClasses": ["problem-card"],
+      "figmaComponent": "Content / Problem Card",
+      "usedOn": ["/"]
+    },
+    {
+      "id": "stat",
+      "name": "Stat Item",
+      "category": "content",
+      "description": "統計數字展示",
+      "variants": ["default"],
+      "cssClasses": ["stat-item"],
+      "figmaComponent": "Content / Stat",
+      "usedOn": ["/about", "/partners"]
+    },
+    {
+      "id": "hero",
+      "name": "Hero",
+      "category": "media",
+      "description": "首頁雙欄 Hero",
+      "variants": ["default"],
+      "cssClasses": ["hero"],
+      "figmaComponent": "Blocks / Hero",
+      "cmsBlockType": "hero",
+      "usedOn": ["/"]
+    },
+    {
+      "id": "page-hero",
+      "name": "Page Hero",
+      "category": "media",
+      "description": "內頁置中 Hero",
+      "variants": ["default"],
+      "cssClasses": ["page-hero"],
+      "figmaComponent": "Blocks / Page Hero",
+      "cmsBlockType": "page-hero",
+      "usedOn": ["/about", "/articles", "/creators", "/partners"]
+    },
+    {
+      "id": "cta-banner",
+      "name": "CTA Banner",
+      "category": "media",
+      "description": "Primary 色 CTA 橫幅",
+      "variants": ["default"],
+      "cssClasses": ["cta-banner"],
+      "figmaComponent": "Blocks / CTA Banner",
+      "cmsBlockType": "cta-banner",
+      "usedOn": ["/", "/about"]
+    },
+    {
+      "id": "split",
+      "name": "Split Media",
+      "category": "media",
+      "description": "圖文左右分欄",
+      "variants": ["default", "reverse"],
+      "cssClasses": ["split", "split--reverse"],
+      "figmaComponent": "Blocks / Split",
+      "cmsBlockType": "split",
+      "usedOn": ["/creators", "/partners"]
+    },
+    {
+      "id": "form-field",
+      "name": "Form Field",
+      "category": "forms",
+      "description": "文字輸入、選單、多行文字",
+      "variants": ["text", "email", "tel", "select", "textarea"],
+      "cssClasses": ["field", "form-grid", "form-panel"],
+      "figmaComponent": "Forms / Text Field",
+      "usedOn": ["/creators", "/partners"]
+    },
+    {
+      "id": "feature-grid",
+      "name": "Feature Grid Block",
+      "category": "blocks",
+      "description": "優勢三欄卡片區塊",
+      "variants": ["default"],
+      "cssClasses": ["feature-grid"],
+      "figmaComponent": "Blocks / Feature Grid",
+      "cmsBlockType": "feature-grid",
+      "usedOn": ["/", "/partners"]
+    },
+    {
+      "id": "problem-grid",
+      "name": "Problem Grid Block",
+      "category": "blocks",
+      "description": "痛點四格區塊",
+      "variants": ["default"],
+      "cssClasses": ["problem-grid"],
+      "figmaComponent": "Blocks / Problem Grid",
+      "cmsBlockType": "problem-grid",
+      "usedOn": ["/"]
+    },
+    {
+      "id": "kol-carousel",
+      "name": "KOL Carousel Block",
+      "category": "blocks",
+      "description": "KOL 類別輪播",
+      "variants": ["default"],
+      "cssClasses": ["kol-scroll", "kol-card", "kol-chips"],
+      "figmaComponent": "Blocks / KOL Carousel",
+      "cmsBlockType": "kol-carousel",
+      "usedOn": ["/"]
+    },
+    {
+      "id": "article-card",
+      "name": "Article Card",
+      "category": "content",
+      "description": "創作者團購文章卡片",
+      "variants": ["default"],
+      "cssClasses": ["article-card", "article-card__cover", "article-card__badge", "article-card__body", "article-card__meta", "article-card__title", "article-card__excerpt", "article-card__footer"],
+      "figmaComponent": "Content / Article Card",
+      "usedOn": ["/articles"]
+    },
+    {
+      "id": "category-chip",
+      "name": "Category Chip",
+      "category": "content",
+      "description": "合作品牌類別標籤",
+      "variants": ["default"],
+      "cssClasses": ["category-chip", "category-grid"],
+      "figmaComponent": "Blocks / Partner Categories",
+      "usedOn": ["/about", "/partners"]
+    },
+    {
+      "id": "partner-inquiry",
+      "name": "Partner Inquiry Form",
+      "category": "forms",
+      "description": "品牌商合作洽詢表單",
+      "variants": ["default"],
+      "cssClasses": ["form-panel", "form-grid", "field", "field--full", "field-required"],
+      "figmaComponent": "Forms / Partner Inquiry",
+      "usedOn": ["/partners"]
+    }
+  ]
+}

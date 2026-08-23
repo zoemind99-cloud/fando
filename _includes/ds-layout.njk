@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{% if title %}{{ title }} · {% endif %}FANDOR Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/m3-tokens.css" />
+    <link rel="stylesheet" href="/css/m3-site.css" />
+    <link rel="stylesheet" href="/css/design-system.css" />
+  </head>
+  <body class="ds">
+    <a class="ds-skip" href="#main">跳至主要內容</a>
+    <div class="ds-shell">
+      <aside class="ds-sidebar" aria-label="Design System 導航">
+        <div class="ds-sidebar__brand">
+          <a href="/design-system/" class="ds-sidebar__logo">FANDOR DS</a>
+          <p class="ds-sidebar__tag">Material Design 3</p>
+        </div>
+        <nav class="ds-nav">
+          <a href="/design-system/" class="ds-nav__link{% if page.id == 'overview' %} ds-nav__link--active{% endif %}">總覽</a>
+          <a href="/design-system/tokens/" class="ds-nav__link{% if page.id == 'tokens' %} ds-nav__link--active{% endif %}">Design Tokens</a>
+          <a href="/design-system/components/" class="ds-nav__link{% if page.id == 'components' %} ds-nav__link--active{% endif %}">Components</a>
+          <a href="/design-system/figma/" class="ds-nav__link{% if page.id == 'figma' %} ds-nav__link--active{% endif %}">Figma 對照</a>
+        </nav>
+        <div class="ds-sidebar__footer">
+          <a href="/" class="ds-nav__link ds-nav__link--muted">← 回到官網</a>
+          <p class="ds-sidebar__note">設計師請在 Figma 改 token 後匯出至 <code>design-tokens/</code></p>
+        </div>
+      </aside>
+      <div class="ds-main-wrap">
+        <header class="ds-topbar">
+          <p class="ds-topbar__eyebrow">Internal · Design System</p>
+          <h1 class="ds-topbar__title">{% if title %}{{ title }}{% else %}FANDOR Design System{% endif %}</h1>
+          {% if description %}<p class="ds-topbar__desc">{{ description }}</p>{% endif %}
+        </header>
+        <main id="main" class="ds-main">
+          {{ content | safe }}
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

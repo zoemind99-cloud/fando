@@ -1,0 +1,29 @@
+<section class="section section--muted" aria-labelledby="kol-title">
+  <div class="container--wide">
+    <div class="section__header">
+      {% if block.eyebrow %}<p class="section__eyebrow">{{ block.eyebrow }}</p>{% endif %}
+      <h2 id="kol-title" class="section__title">{{ block.title }}</h2>
+    </div>
+    <div class="kol-scroll" id="kol-carousel" tabindex="0" aria-label="KOL 類別輪播">
+      {% for item in block.items %}
+      <article class="kol-card" data-kol-index="{{ loop.index0 }}">
+        <img src="{{ item.image }}" alt="{{ item.label }}" />
+        <div class="kol-card__label">{{ item.label }}</div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="kol-chips-wrap" aria-label="KOL 類別篩選">
+      <button type="button" class="icon-btn kol-chips__nav" data-kol-scroll="prev" aria-label="上一類別">
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <div class="kol-chips" id="kol-chips">
+        {% for item in block.items %}
+        <button type="button" class="kol-chip{% if loop.first %} kol-chip--active{% endif %}" data-kol-index="{{ loop.index0 }}">{{ item.chip }}</button>
+        {% endfor %}
+      </div>
+      <button type="button" class="icon-btn kol-chips__nav" data-kol-scroll="next" aria-label="下一類別">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+</section>

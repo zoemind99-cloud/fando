@@ -1,0 +1,24 @@
+tagline: 讓每一位創作者，都能輕鬆開團變現。精選商品、專屬團購連結、即時銷售數據，從曝光到成交一次完成。
+company: 故事行銷顧問股份有限公司
+taxId: "93488152"
+copyright: © 2026 FANDOR. All rights reserved.
+quickLinksHeading: 快速連結
+contactHeading: 聯絡我們
+quickLinks:
+  - href: /
+    label: 首頁
+  - href: /about
+    label: 關於我們
+  - href: /articles
+    label: 文章分享
+  - href: /creators
+    label: 創作者專區
+  - href: /partners
+    label: 品牌商合作
+contact:
+  - type: email
+    label: hstoryteller@starpost.io
+    href: mailto:hstoryteller@starpost.io
+  - type: link
+    label: fandor.co
+    href: https://fandor.co

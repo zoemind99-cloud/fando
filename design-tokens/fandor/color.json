@@ -1,0 +1,22 @@
+{
+  "fandor": {
+    "primary": {
+      "50": { "$value": "oklch(0.98 0.015 355)", "$type": "color", "$description": "FANDOR primary tint" },
+      "100": { "$value": "oklch(0.96 0.03 355)", "$type": "color" },
+      "500": { "$value": "oklch(0.75 0.13 355)", "$type": "color" },
+      "600": { "$value": "oklch(0.65 0.12 355)", "$type": "color" },
+      "700": { "$value": "oklch(0.54 0.1 355)", "$type": "color" }
+    },
+    "accent": {
+      "500": { "$value": "oklch(0.68 0.24 125)", "$type": "color", "$description": "FANDOR lime accent" },
+      "600": { "$value": "oklch(0.59 0.2 125)", "$type": "color" }
+    },
+    "surface": { "$value": "oklch(0.99 0.004 355)", "$type": "color" },
+    "surface-container": { "$value": "oklch(0.97 0.008 355)", "$type": "color" },
+    "surface-container-high": { "$value": "oklch(0.94 0.015 355)", "$type": "color" },
+    "navbar": { "$value": "oklch(0.93 0.05 68)", "$type": "color" },
+    "on-surface": { "$value": "oklch(0.19 0.005 20)", "$type": "color" },
+    "on-surface-variant": { "$value": "oklch(0.46 0.015 20)", "$type": "color" },
+    "outline-variant": { "$value": "oklch(0.87 0.015 20)", "$type": "color" }
+  }
+}

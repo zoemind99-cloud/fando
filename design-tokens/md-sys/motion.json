@@ -1,0 +1,12 @@
+{
+  "md-sys": {
+    "motion": {
+      "easing": {
+        "standard": { "$value": "cubic-bezier(0.2, 0, 0, 1)", "$type": "cubicBezier" }
+      },
+      "duration": {
+        "medium": { "$value": "250ms", "$type": "duration" }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "fandor-website",
+  "private": true,
+  "version": "0.1.0",
+  "description": "FANDOR 官網草稿（從 Readdy 預覽站下載）",
+  "type": "module",
+  "scripts": {
+    "tokens:build": "node scripts/build-tokens.mjs",
+    "registry:generate": "node scripts/generate-component-registry.mjs",
+    "content:build": "node scripts/build-content.mjs",
+    "eleventy:ds": "eleventy --config=eleventy.design-system.js",
+    "eleventy:pages": "eleventy --config=eleventy.pages.js",
+    "ds:build": "npm run tokens:build && npm run registry:generate && npm run eleventy:ds",
+    "build": "npm run tokens:build && npm run registry:generate && npm run content:build && npm run eleventy:ds && npm run eleventy:pages",
+    "figma:check": "node scripts/figma-sync-check.mjs",
+    "figma:config": "node scripts/figma-config-set.mjs",
+    "dev": "npm run build && serve . -l 5173",
+    "preview": "npm run dev"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "serve": "^14.2.4"
+  }
+}

@@ -1,0 +1,92 @@
+---
+layout: ds-layout.njk
+title: Figma 對照
+description: Figma Variables、Components 與程式碼 token / 元件 ID 的對照表。
+page:
+  id: figma
+permalink: figma/index.html
+---
+
+<section class="ds-section">
+  <h2 class="ds-section__title">Token Sets</h2>
+  <p class="ds-section__desc">Tokens Studio 匯出路徑需與下方一致。Plugin：<strong>{{ figma.plugin }}</strong></p>
+  <table class="ds-table">
+    <thead>
+      <tr><th>Set ID</th><th>名稱</th><th>檔案</th></tr>
+    </thead>
+    <tbody>
+      {% for set in figma.tokenSets %}
+      <tr>
+        <td><code>{{ set.id }}</code></td>
+        <td>{{ set.label }}</td>
+        <td><code>{{ set.file }}</code></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">Figma Variables ↔ CSS</h2>
+  <table class="ds-table">
+    <thead>
+      <tr><th>Figma Variable</th><th>Token Path</th><th>CSS Variable</th><th>語意色</th></tr>
+    </thead>
+    <tbody>
+      {% for row in figma.figmaVariables %}
+      <tr>
+        <td><code>{{ row.figma }}</code></td>
+        <td><code>{{ row.token }}</code></td>
+        <td><code>{{ row.cssVar }}</code></td>
+        <td>{% if row.semantic %}<code>{{ row.semantic }}</code>{% else %}—{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">Figma Components ↔ 程式碼</h2>
+  <table class="ds-table">
+    <thead>
+      <tr><th>Figma Component</th><th>Code ID</th><th>CMS Block</th><th>Variants</th></tr>
+    </thead>
+    <tbody>
+      {% for row in figma.figmaComponents %}
+      <tr>
+        <td>{{ row.figma }}</td>
+        <td><a href="/design-system/components/#{{ row.codeId }}"><code>{{ row.codeId }}</code></a></td>
+        <td>{% if row.cmsBlock %}<code>{{ row.cmsBlock }}</code>{% else %}—{% endif %}</td>
+        <td>{% if row.variants %}{{ row.variants | join(', ') }}{% else %}—{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">設計師工作流程（Figma → Code）</h2>
+  <ol class="ds-steps">
+    {% for step in figma.workflowDesigner %}
+    <li>{{ step }}</li>
+    {% endfor %}
+  </ol>
+  <p class="ds-section__desc">固定指令：<code>/figma-sync</code> · 設定檔：<code>scripts/figma-config.json</code></p>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">Token 匯出（可選 Tokens Studio）</h2>
+  <ol class="ds-steps">
+    {% for step in figma.workflowTokensStudioOptional %}
+    <li>{{ step }}</li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">Figma 檔案結構建議</h2>
+  <pre class="ds-code"><code>{{ figma.figmaFileName }}.fig
+├── Tokens/          Variables + Tokens Studio sync
+├── Components/      Actions · Navigation · Content · Blocks · Forms
+└── Page Templates/    對應 WIREFRAME-BLOCKS.md 各頁</code></pre>
+</section>

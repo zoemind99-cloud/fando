@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "fandor/color",
+    "md-sys/color",
+    "md-sys/shape",
+    "md-sys/typography",
+    "md-sys/motion",
+    "layout/spacing"
+  ]
+}

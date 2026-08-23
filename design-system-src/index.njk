@@ -1,0 +1,64 @@
+---
+layout: ds-layout.njk
+title: 總覽
+description: FANDOR 官網 Design System — 設計師可在此預覽 token 與元件，並對照 Figma 規格。
+page:
+  id: overview
+---
+{% from "ds-sync.njk" import renderOverviewSync %}
+
+{{ renderOverviewSync() }}
+
+<section class="ds-section">
+  <h2 class="ds-section__title">快速開始</h2>
+  <div class="ds-card-grid ds-card-grid--2">
+    <a href="/design-system/tokens/" class="ds-card ds-card--link">
+      <span class="material-symbols-outlined ds-card__icon">palette</span>
+      <h3 class="ds-card__title">Design Tokens</h3>
+      <p class="ds-card__desc">色票、字級、間距、圓角、動效。由 <code>design-tokens/</code> 自動產生 CSS。</p>
+    </a>
+    <a href="/design-system/components/" class="ds-card ds-card--link">
+      <span class="material-symbols-outlined ds-card__icon">widgets</span>
+      <h3 class="ds-card__title">Components</h3>
+      <p class="ds-card__desc">{{ components.components.length }} 個元件，含 variant 預覽與使用頁面對照。</p>
+    </a>
+  </div>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">設計師工作流程</h2>
+  <ol class="ds-steps">
+    <li>在 <strong>Figma</strong> 調整 Variables（色票、字級等）</li>
+    <li>用 <strong>Tokens Studio</strong> 匯出至 <code>design-tokens/</code> 並 commit</li>
+    <li>執行 <code>npm run tokens:build</code>（或 <code>npm run build</code>）</li>
+    <li>在 <a href="/design-system/tokens/">Design Tokens</a> 頁確認變更</li>
+    <li>文案 / 首頁區塊 → 編輯 <code>content/</code> 後執行 <code>npm run build</code></li>
+  </ol>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">元件分類</h2>
+  <div class="ds-category-list">
+    {% for cat in components.categories %}
+    <div class="ds-category">
+      <h3 class="ds-category__title">{{ cat.label }}</h3>
+      <p class="ds-category__desc">{{ cat.description }}</p>
+      <ul class="ds-category__items">
+        {% for comp in components.components %}
+          {% if comp.category == cat.id %}
+          <li><a href="/design-system/components/#{{ comp.id }}">{{ comp.name }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="ds-section">
+  <h2 class="ds-section__title">目錄結構</h2>
+  <pre class="ds-code"><code>design-tokens/          ← Figma Tokens Studio 匯入
+css/m3-tokens.css       ← 自動產生（勿手改）
+scripts/components-registry.json
+design-system/          ← 此展示站</code></pre>
+</section>

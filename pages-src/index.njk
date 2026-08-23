@@ -1,0 +1,10 @@
+---
+permalink: index.html
+layout: layouts/site.njk
+pageId: home
+eleventyExcludeFromCollections: true
+---
+{% for block in home.blocks %}
+  {% set tpl = "blocks/" ~ block.type ~ ".njk" %}
+  {% include tpl %}
+{% endfor %}

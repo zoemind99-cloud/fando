@@ -1,0 +1,98 @@
+seo:
+  title: WLAND FANDOR MEDIA - 讓每一位創作者輕鬆開團變現
+  description: FANDOR 是專為創作者打造的團購變現平台，提供精選商品、專屬團購連結與即時銷售數據，從曝光到成交一次完成。
+
+blocks:
+  - type: hero
+    eyebrow: 創作者銷售平台
+    title: 以{accent}創作者{/accent}影響力驅動{accent-lime}品牌商{/accent-lime}曝光，打造可持續的商業價值。
+    description: 從品牌合作、內容共創到導購銷售，粉多協助創作者找到適合自己的合作模式，也幫助品牌找到真正具影響力與轉換力的合作夥伴。
+    image: /public/images/hero-pink-02.jpg
+    imageAlt: FANDOR 創作者活潑情境
+    actions:
+      - label: 創作者加入 →
+        href: /creators
+        variant: filled
+      - label: 品牌商了解更多 →
+        href: /partners
+        variant: outlined
+    social:
+      - network: instagram
+        href: "#"
+        label: Instagram
+      - network: facebook
+        href: "#"
+        label: Facebook
+      - network: line
+        href: "#"
+        label: Line
+
+  - type: problem-grid
+    title: 您是否也想為品牌找到適合的網紅幫助行銷，<br />卻遇到以下問題？
+    cards:
+      - question: 怎麼找？
+        answer: 什麼樣的網紅<br />適合你的品牌
+      - question: 怎麼選？
+        answer: 怎麼知道是<br />帶貨型網紅？
+      - question: 怎麼談？
+        answer: 如何溝通帶貨商案？<br />分潤費用怎麼談？
+      - question: 成效如何？
+        answer: 如何評估<br />帶貨成效？
+
+  - type: feature-grid
+    eyebrow: 平台優勢
+    title: 為什麼選擇 FANDOR？
+    description: 我們專注打造最適合創作者的團購生態系，三大核心優勢讓你輕鬆起步、穩定成長
+    features:
+      - icon: payments
+        title: 創作者長期變現
+        description: 透過 FANDOR 平台，創作者能建立穩定的被動收入來源。每次開團都能累積粉絲信任，長期經營讓變現能力持續增長，不再只依賴一次性業配。
+      - icon: shopping_bag
+        title: 眾多選擇商品
+        description: 平台嚴選百樣優質商品，涵蓋美妝保養、時尚配件、生活用品等多元品類。創作者可依自身風格與粉絲喜好，自由挑選最適合的團購商品。
+      - icon: handshake
+        title: 創作者媒合平台
+        description: FANDOR 不僅是團購工具，更是創作者與優質廠商的媒合橋樑。我們主動推薦適合的合作機會，讓雙方都能快速找到理想夥伴，共創雙贏。
+
+  - type: kol-carousel
+    eyebrow: KOL 類別多元豐富
+    title: 與超過 30,000 位具有帶貨能力的 KOL 合作
+    items:
+      - image: /public/images/creator-food-01.jpg
+        label: 美食烹飪創作者
+        chip: 美食烹飪
+      - image: /public/images/creator-travel-01.jpg
+        label: 旅遊創作者
+        chip: 旅遊
+      - image: /public/images/creator-mom-01.jpg
+        label: 母嬰創作者
+        chip: 母嬰
+      - image: /public/images/creator-tech-01.jpg
+        label: 3C科技創作者
+        chip: 3C科技
+      - image: /public/images/creator-pet-01.jpg
+        label: 寵物創作者
+        chip: 寵物
+      - image: /public/images/creator-fitness-01.jpg
+        label: 健身創作者
+        chip: 健身
+      - image: /public/images/creator-fashion-01.jpg
+        label: 服飾創作者
+        chip: 服飾
+      - image: /public/images/creator-beauty-01.jpg
+        label: 美妝保養創作者
+        chip: 美妝保養
+      - image: /public/images/creator-finance-01.jpg
+        label: 投資理財創作者
+        chip: 投資理財
+
+  - type: cta-banner
+    title: 準備好開始你的銷售之旅了嗎？
+    description: 加入 FANDOR，與 500+ 創作者一起，開啟穩定變現的新篇章
+    actions:
+      - label: 成為合作創作者 →
+        href: /creators
+        variant: on-primary
+      - label: 我是品牌商，想了解合作 →
+        href: /partners
+        variant: on-primary-outline

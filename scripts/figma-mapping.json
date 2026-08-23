@@ -1,0 +1,88 @@
+{
+  "figmaFileName": "FANDOR Design System",
+  "plugin": "Tokens Studio for Figma",
+  "exportPath": "design-tokens/",
+  "tokenSets": [
+    { "id": "fandor/color", "label": "FANDOR 品牌色", "file": "design-tokens/fandor/color.json" },
+    { "id": "md-sys/color", "label": "MD3 語意色", "file": "design-tokens/md-sys/color.json" },
+    { "id": "md-sys/shape", "label": "圓角", "file": "design-tokens/md-sys/shape.json" },
+    { "id": "md-sys/typography", "label": "字級", "file": "design-tokens/md-sys/typography.json" },
+    { "id": "md-sys/motion", "label": "動效", "file": "design-tokens/md-sys/motion.json" },
+    { "id": "layout/spacing", "label": "間距 & 布局", "file": "design-tokens/layout/spacing.json" }
+  ],
+  "figmaVariables": [
+    {
+      "figma": "color/primary",
+      "token": "fandor.primary.600",
+      "cssVar": "--fandor-primary-600",
+      "semantic": "--md-sys-color-primary",
+      "note": "Figma Variable 對應品牌主色，語意色引用此 token"
+    },
+    {
+      "figma": "color/primary-container",
+      "token": "fandor.primary.100",
+      "cssVar": "--fandor-primary-100",
+      "semantic": "--md-sys-color-primary-container"
+    },
+    {
+      "figma": "color/accent",
+      "token": "fandor.accent.600",
+      "cssVar": "--fandor-accent-600",
+      "semantic": "--md-sys-color-secondary"
+    },
+    {
+      "figma": "color/surface",
+      "token": "fandor.surface",
+      "cssVar": "--fandor-surface",
+      "semantic": "--md-sys-color-surface"
+    },
+    {
+      "figma": "color/on-surface",
+      "token": "fandor.on-surface",
+      "cssVar": "--fandor-on-surface",
+      "semantic": "--md-sys-color-on-surface"
+    },
+    {
+      "figma": "color/error",
+      "token": "md-sys.color.error",
+      "cssVar": "--md-sys-color-error",
+      "semantic": "--md-sys-color-error"
+    }
+  ],
+  "figmaComponents": [
+    { "figma": "Actions / Button", "codeId": "btn", "variants": ["Filled", "Outlined", "Text", "On Primary"] },
+    { "figma": "Actions / Icon Button", "codeId": "icon-btn" },
+    { "figma": "Actions / Filter Chip", "codeId": "chip" },
+    { "figma": "Navigation / Top App Bar", "codeId": "top-app-bar" },
+    { "figma": "Navigation / Drawer", "codeId": "drawer" },
+    { "figma": "Navigation / Footer", "codeId": "footer" },
+    { "figma": "Content / Section Header", "codeId": "section-header" },
+    { "figma": "Content / Feature Card", "codeId": "feature-card" },
+    { "figma": "Blocks / Hero", "codeId": "hero", "cmsBlock": "hero" },
+    { "figma": "Blocks / Page Hero", "codeId": "page-hero", "cmsBlock": "page-hero" },
+    { "figma": "Blocks / CTA Banner", "codeId": "cta-banner", "cmsBlock": "cta-banner" },
+    { "figma": "Blocks / Split", "codeId": "split", "cmsBlock": "split" },
+    { "figma": "Forms / Text Field", "codeId": "form-field" },
+    { "figma": "Forms / Join Form", "codeId": "form-field" },
+    { "figma": "Forms / Partner Inquiry", "codeId": "form-field" },
+    { "figma": "Content / Article Card", "codeId": "article-card" },
+    { "figma": "Blocks / Partner Categories", "codeId": "category-chip" },
+    { "figma": "Blocks / Brand History", "codeId": null },
+    { "figma": "Blocks / KOL Carousel", "codeId": "kol-carousel" }
+  ],
+  "figmaConfig": "scripts/figma-config.json",
+  "syncSkill": ".agents/skills/figma-sync/SKILL.md",
+  "workflowDesigner": [
+    "在 Figma 檔「FANDOR Design System」修改 Variables 或 Component",
+    "存檔（Figma 自動雲端同步）",
+    "到 Cursor 執行：/figma-sync 或說「同步 Figma」",
+    "Agent 讀 Figma MCP → 更新 design-tokens/ 或 css/m3-site.css → npm run build",
+    "在 /design-system/ 與官網確認"
+  ],
+  "workflowTokensStudioOptional": [
+    "（可選）安裝 Tokens Studio for Figma",
+    "連結 Variables ↔ design-tokens/ token sets",
+    "Export JSON 到 design-tokens/ 後 npm run tokens:build",
+    "Token 可不走 MCP，元件仍走 /figma-sync"
+  ]
+}

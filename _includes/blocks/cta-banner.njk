@@ -1,0 +1,15 @@
+<section class="section section--primary" aria-labelledby="mid-cta-title">
+  <div class="container">
+    <div class="cta-banner">
+      <h2 id="mid-cta-title" class="cta-banner__title">{{ block.title }}</h2>
+      {% if block.description %}<p class="cta-banner__desc">{{ block.description }}</p>{% endif %}
+      {% if block.actions %}
+      <div class="cta-banner__actions">
+        {% for action in block.actions %}
+        <a href="{{ action.href }}" class="btn {{ action.variant | btnClass }} btn--large">{{ action.label }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

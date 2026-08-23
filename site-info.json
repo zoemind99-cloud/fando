@@ -1,0 +1,71 @@
+{
+  "title": "WLAND FANDOR MEDIA",
+  "source": "https://readdy.cc/preview/c5846cac-8c0f-4441-afa9-5251c60c1feb/12490536",
+  "projectId": "c5846cac-8c0f-4441-afa9-5251c60c1feb",
+  "pages": [
+    {
+      "path": "/",
+      "label": "首頁"
+    },
+    {
+      "path": "/about",
+      "label": "關於我們"
+    },
+    {
+      "path": "/articles",
+      "label": "文章分享"
+    },
+    {
+      "path": "/creators",
+      "label": "創作者專區"
+    },
+    {
+      "path": "/partners",
+      "label": "廠商合作"
+    }
+  ],
+  "contact": {
+    "email": "hello@fandor.co",
+    "website": "fandor.co",
+    "company": "故事行銷顧問股份有限公司",
+    "taxId": "93488152"
+  },
+  "downloadedImages": [
+    "9b7dee20-3ed5-4c0e-b1e2-aa1c324e60d0.png",
+    "about-cta-bg.jpg",
+    "about-hero-banner.jpg",
+    "about-intro-team.jpg",
+    "article-cover-01.jpg",
+    "article-cover-02.jpg",
+    "article-cover-03.jpg",
+    "article-cover-04.jpg",
+    "article-cover-05.jpg",
+    "article-cover-06.jpg",
+    "avatar-01.jpg",
+    "avatar-02.jpg",
+    "avatar-03.jpg",
+    "avatar-04.jpg",
+    "avatar-05.jpg",
+    "avatar-06.jpg",
+    "creator-beauty-01.jpg",
+    "creator-fashion-01.jpg",
+    "creator-finance-01.jpg",
+    "creator-fitness-01.jpg",
+    "creator-food-01.jpg",
+    "creator-groupbuy-01.jpg",
+    "creator-mom-01.jpg",
+    "creator-monetize-01.jpg",
+    "creator-pet-01.jpg",
+    "creator-tech-01.jpg",
+    "creator-travel-01.jpg",
+    "hero-pink-02.jpg",
+    "history-2023.jpg",
+    "history-2024.jpg",
+    "history-2025.jpg",
+    "history-2026.jpg",
+    "partner-meeting-01.jpg",
+    "readdy-logo.png",
+    "watermark.png"
+  ],
+  "note": "此為 Readdy 編譯後的預覽版（minified JS），非原始 React 原始碼。若要完整修改元件與樣式，建議從 Readdy 後台 Code Editor 下載 .zip 原始專案。"
+}

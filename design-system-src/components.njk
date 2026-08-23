@@ -1,0 +1,57 @@
+---
+layout: ds-layout.njk
+title: Components
+description: 全站共用元件目錄。每個元件對應 Figma component 名稱與 CSS class。
+page:
+  id: components
+permalink: components/index.html
+---
+{% from "ds-preview.njk" import render %}
+{% from "ds-sync.njk" import renderSync %}
+
+{% for cat in components.categories %}
+<section class="ds-section" id="cat-{{ cat.id }}">
+  <h2 class="ds-section__title">{{ cat.label }}</h2>
+  <p class="ds-section__desc">{{ cat.description }}</p>
+
+  {% for comp in components.components %}
+    {% if comp.category == cat.id %}
+    <article class="ds-component" id="{{ comp.id }}">
+      <header class="ds-component__header">
+        <div>
+          <h3 class="ds-component__title">{{ comp.name }}</h3>
+          <p class="ds-component__desc">{{ comp.description }}</p>
+        </div>
+        <div class="ds-component__meta">
+          {% if comp.figmaComponent %}
+          <span class="ds-badge">Figma: {{ comp.figmaComponent }}</span>
+          {% endif %}
+          {% if comp.cmsBlockType %}
+          <span class="ds-badge ds-badge--accent">Content: {{ comp.cmsBlockType }}</span>
+          {% endif %}
+        </div>
+      </header>
+
+      {{ render(comp) }}
+
+      {{ renderSync(comp) }}
+
+      <dl class="ds-component__spec">
+        {% if comp.variants %}
+        <div><dt>Variants</dt><dd>{{ comp.variants | join(', ') }}</dd></div>
+        {% endif %}
+        {% if comp.sizes %}
+        <div><dt>Sizes</dt><dd>{{ comp.sizes | join(', ') }}</dd></div>
+        {% endif %}
+        {% if comp.cssClasses %}
+        <div><dt>CSS</dt><dd><code>{{ comp.cssClasses | join(' · ') }}</code></dd></div>
+        {% endif %}
+        {% if comp.usedOn %}
+        <div><dt>使用頁面</dt><dd>{{ comp.usedOn | join(', ') }}</dd></div>
+        {% endif %}
+      </dl>
+    </article>
+    {% endif %}
+  {% endfor %}
+</section>
+{% endfor %}

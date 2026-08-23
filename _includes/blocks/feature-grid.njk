@@ -1,0 +1,18 @@
+<section class="section" aria-labelledby="advantage-title">
+  <div class="container">
+    <div class="section__header">
+      {% if block.eyebrow %}<p class="section__eyebrow">{{ block.eyebrow }}</p>{% endif %}
+      <h2 id="advantage-title" class="section__title">{{ block.title }}</h2>
+      {% if block.description %}<p class="section__desc">{{ block.description }}</p>{% endif %}
+    </div>
+    <div class="feature-grid">
+      {% for feature in block.features %}
+      <article class="feature-card">
+        <div class="feature-card__icon" aria-hidden="true"><span class="material-symbols-outlined">{{ feature.icon }}</span></div>
+        <h3 class="feature-card__title">{{ feature.title }}</h3>
+        <p class="feature-card__desc">{{ feature.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

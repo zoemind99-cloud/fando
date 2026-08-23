@@ -1,0 +1,111 @@
+{# 各元件「改哪裡 → 跑什麼 → 影響哪裡」 #}
+{% macro renderSync(comp) %}
+<aside class="ds-sync" aria-label="同步至官網">
+  <h4 class="ds-sync__title">⟳ 如何同步至官網</h4>
+  <p class="ds-sync__note">此頁僅預覽，無法在瀏覽器直接儲存。請改下方源頭檔案後 build。</p>
+
+  {% if comp.id == 'btn' or comp.id == 'icon-btn' or comp.id == 'chip' %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>全站（所有使用此 class 的頁面）</dd></div>
+    <div><dt>改這裡</dt><dd><code>css/m3-site.css</code> — 搜尋 <code>.{{ comp.cssClasses[0] }}</code></dd></div>
+    <div><dt>Figma 改完</dt><dd>Cursor 執行 <code>/figma-sync {{ comp.id }}</code></dd></div>
+    <div><dt>指令</dt><dd>存檔 → 重新整理；或 <code>npm run build</code></dd></div>
+    <div><dt>確認</dt><dd>本頁 preview + <a href="/">官網首頁</a></dd></div>
+  </dl>
+
+  {% elif comp.id == 'top-app-bar' or comp.id == 'drawer' %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>全站導航</dd></div>
+    <div><dt>樣式</dt><dd><code>css/m3-site.css</code> — <code>.top-app-bar</code> / <code>.drawer</code></dd></div>
+    <div><dt>連結文案</dt><dd><code>content/site/nav.yml</code></dd></div>
+    <div><dt>結構</dt><dd><code>js/site.js</code>（進階）</dd></div>
+    <div><dt>指令</dt><dd><code>npm run build</code></dd></div>
+    <div><dt>確認</dt><dd><a href="/">/</a>、<a href="/about">/about</a></dd></div>
+  </dl>
+
+  {% elif comp.id == 'footer' %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>全站頁尾</dd></div>
+    <div><dt>樣式</dt><dd><code>css/m3-site.css</code> — <code>.footer</code></dd></div>
+    <div><dt>文案 / 連結</dt><dd><code>content/site/footer.yml</code></dd></div>
+    <div><dt>Figma 改完</dt><dd>Cursor 執行 <code>/figma-sync footer</code></dd></div>
+    <div><dt>指令</dt><dd><code>npm run build</code></dd></div>
+    <div><dt>確認</dt><dd>任一官網頁面底部</dd></div>
+  </dl>
+
+  {% elif comp.id == 'section-header' or comp.id == 'feature-card' or comp.id == 'problem-card' or comp.id == 'stat' %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>全站（有使用此元件的頁面）</dd></div>
+    <div><dt>改這裡</dt><dd><code>css/m3-site.css</code> — 搜尋 <code>.{{ comp.cssClasses[0] }}</code></dd></div>
+    <div><dt>首頁文案</dt><dd><code>content/pages/home.yml</code> 對應 block</dd></div>
+    <div><dt>其他頁文案</dt><dd>各頁 <code>.html</code>（尚未 block 化）</dd></div>
+    <div><dt>指令</dt><dd>CSS：重新整理 · 首頁 YAML：<code>npm run build</code></dd></div>
+  </dl>
+
+  {% elif comp.id == 'form-field' %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>/creators、/partners 表單</dd></div>
+    <div><dt>改這裡</dt><dd><code>css/m3-site.css</code> — <code>.field</code>、<code>.form-grid</code></dd></div>
+    <div><dt>指令</dt><dd>存檔 → 重新整理</dd></div>
+    <div><dt>確認</dt><dd><a href="/creators">/creators</a></dd></div>
+  </dl>
+
+  {% elif comp.id == 'hero' or comp.id == 'problem-grid' or comp.id == 'feature-grid' or comp.id == 'kol-carousel' or comp.id == 'cta-banner' %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>首頁 <code>/</code></dd></div>
+    <div><dt>樣式</dt><dd><code>css/m3-site.css</code></dd></div>
+    <div><dt>文案 / 圖片 / 順序</dt><dd><code>content/pages/home.yml</code> — block <code>{{ comp.cmsBlockType | default(comp.id) }}</code></dd></div>
+    <div><dt>HTML 結構</dt><dd><code>_includes/blocks/{{ comp.cmsBlockType | default(comp.id) }}.njk</code></dd></div>
+    <div><dt>指令</dt><dd><code>npm run build</code></dd></div>
+    <div><dt>確認</dt><dd><a href="/">官網首頁</a></dd></div>
+  </dl>
+
+  {% elif comp.id == 'page-hero' or comp.id == 'split' %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>內頁（about、creators、partners…）</dd></div>
+    <div><dt>樣式</dt><dd><code>css/m3-site.css</code> — <code>.{{ comp.cssClasses[0] }}</code></dd></div>
+    <div><dt>文案</dt><dd>各頁 <code>.html</code>（尚未 YAML block 化）</dd></div>
+    <div><dt>指令</dt><dd>CSS：重新整理 · HTML：存檔後重新整理</dd></div>
+    <div><dt>確認</dt><dd>{% for p in comp.usedOn %}<a href="{{ p }}">{{ p }}</a>{% if not loop.last %} · {% endif %}{% endfor %}</dd></div>
+  </dl>
+
+  {% else %}
+  <dl class="ds-sync__list">
+    <div><dt>影響範圍</dt><dd>見「使用頁面」</dd></div>
+    <div><dt>樣式</dt><dd><code>css/m3-site.css</code></dd></div>
+    <div><dt>指令</dt><dd><code>npm run build</code></dd></div>
+  </dl>
+  {% endif %}
+</aside>
+{% endmacro %}
+
+{% macro renderTokenSync() %}
+<aside class="ds-sync ds-sync--tokens" aria-label="Token 同步至官網">
+  <h4 class="ds-sync__title">⟳ 如何同步至官網</h4>
+  <p class="ds-sync__note">Token 變更會同時更新 Design System 與<strong>全站</strong>（共用 <code>m3-tokens.css</code>）。</p>
+  <ol class="ds-sync__steps">
+    <li>在 Figma「FANDOR Design System」改 Variables（或 Tokens Studio 匯出 <code>design-tokens/</code>）</li>
+    <li>Cursor 執行 <code>/figma-sync tokens</code>（或手改 JSON 後 <code>npm run tokens:build</code>）</li>
+    <li>執行 <code>npm run build</code></li>
+    <li>重新整理本頁 + <a href="/">官網</a> 確認</li>
+  </ol>
+  <p class="ds-sync__hint">勿手改 <code>css/m3-tokens.css</code>（自動產生）。</p>
+</aside>
+{% endmacro %}
+
+{% macro renderOverviewSync() %}
+<aside class="ds-sync ds-sync--overview" aria-label="Design System 同步說明">
+  <h4 class="ds-sync__title">⟳ Design System 與官網如何同步？</h4>
+  <p class="ds-sync__note">本站是<strong>鏡子</strong>，不是編輯器。改源頭 → build → 兩邊一起變。</p>
+  <table class="ds-table ds-table--compact">
+    <thead><tr><th>改什麼</th><th>改哪裡</th><th>指令</th><th>影響</th></tr></thead>
+    <tbody>
+      <tr><td>色票 / 字級</td><td>Figma Variables → <code>/figma-sync tokens</code></td><td><code>npm run build</code></td><td>全站 + DS</td></tr>
+      <tr><td>元件樣式</td><td>Figma → <code>/figma-sync</code> 或 <code>css/m3-site.css</code></td><td><code>npm run build</code></td><td>全站 + DS</td></tr>
+      <tr><td>Nav / Footer</td><td><code>content/site/*.yml</code></td><td><code>npm run build</code></td><td>全站</td></tr>
+      <tr><td>首頁區塊</td><td><code>content/pages/home.yml</code></td><td><code>npm run build</code></td><td>首頁</td></tr>
+      <tr><td>DS 展示版面</td><td><code>design-system-src/</code></td><td><code>npm run eleventy:ds</code></td><td>僅 DS</td></tr>
+    </tbody>
+  </table>
+</aside>
+{% endmacro %}

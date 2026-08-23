@@ -1,0 +1,158 @@
+{
+  "fileName": "FANDOR Design System",
+  "fileKey": "vf6dAa86dPRC1Y3IJcMOZO",
+  "fileUrl": "https://www.figma.com/design/vf6dAa86dPRC1Y3IJcMOZO/FANDOR-Design-System",
+  "updatedAt": "2026-08-24",
+  "pilot": {
+    "description": "Phase 1–6 已建。Page Templates：Home · About · Creators · Partners · Articles。",
+    "tokens": {
+      "nodeId": "1:9",
+      "label": "Tokens / Foundations",
+      "codeTargets": [
+        "design-tokens/"
+      ]
+    },
+    "btn": {
+      "nodeId": "4:21",
+      "label": "Actions / Button",
+      "codeId": "btn",
+      "codeTargets": [
+        "css/m3-site.css"
+      ]
+    },
+    "footer": {
+      "nodeId": "4:35",
+      "label": "Navigation / Footer",
+      "codeId": "footer",
+      "codeTargets": [
+        "css/m3-site.css",
+        "content/site/footer.yml"
+      ]
+    },
+    "top-app-bar": {
+      "nodeId": "10:41",
+      "label": "Navigation / Top App Bar",
+      "codeId": "top-app-bar",
+      "codeTargets": ["css/m3-site.css"]
+    },
+    "hero": {
+      "nodeId": "10:78",
+      "label": "Blocks / Hero",
+      "codeId": "hero",
+      "codeTargets": ["css/m3-site.css", "content/pages/home.yml"]
+    },
+    "section-header": {
+      "nodeId": "11:58",
+      "label": "Content / Section Header",
+      "codeId": "section-header",
+      "codeTargets": ["css/m3-site.css"]
+    },
+    "feature-card": {
+      "nodeId": "11:47",
+      "label": "Content / Feature Card",
+      "codeId": "feature-card",
+      "codeTargets": ["css/m3-site.css"]
+    },
+    "cta-banner": {
+      "nodeId": "11:70",
+      "label": "Blocks / CTA Banner",
+      "codeId": "cta-banner",
+      "codeTargets": ["css/m3-site.css", "content/pages/home.yml"]
+    },
+    "filter-chip": {
+      "nodeId": "13:48",
+      "label": "Actions / Filter Chip",
+      "codeId": "chip",
+      "codeTargets": ["css/m3-site.css"]
+    },
+    "kol-carousel": {
+      "nodeId": "13:49",
+      "label": "Blocks / KOL Carousel",
+      "codeId": "kol-carousel",
+      "codeTargets": ["css/m3-site.css", "content/pages/home.yml"]
+    },
+    "page-hero": {
+      "nodeId": "13:199",
+      "label": "Blocks / Page Hero",
+      "codeId": "page-hero",
+      "codeTargets": ["css/m3-site.css"]
+    },
+    "join-form": {
+      "nodeId": "14:52",
+      "label": "Forms / Join Form",
+      "codeId": "form-field",
+      "codeTargets": ["css/m3-site.css"]
+    },
+    "brand-history": {
+      "nodeId": "14:85",
+      "label": "Blocks / Brand History",
+      "codeId": null,
+      "codeTargets": ["css/m3-site.css", "about.html"]
+    },
+    "article-card": {
+      "nodeId": "15:52",
+      "label": "Content / Article Card",
+      "codeId": "article-card",
+      "codeTargets": ["css/m3-site.css", "articles.html"]
+    },
+    "partner-categories": {
+      "nodeId": "15:61",
+      "label": "Blocks / Partner Categories",
+      "codeId": "category-chip",
+      "codeTargets": ["css/m3-site.css", "about.html", "partners.html"]
+    },
+    "partner-inquiry": {
+      "nodeId": "15:94",
+      "label": "Forms / Partner Inquiry",
+      "codeId": "form-field",
+      "codeTargets": ["css/m3-site.css", "partners.html"]
+    },
+    "home-page": {
+      "nodeId": "11:78",
+      "label": "Page / Home",
+      "codeId": null,
+      "codeTargets": [],
+      "note": "Page Template 參考用，不參與 /figma-sync 自動更新"
+    },
+    "about-page": {
+      "nodeId": "13:234",
+      "label": "Page / About",
+      "codeId": null,
+      "codeTargets": [],
+      "note": "Page Template 參考用，不參與 /figma-sync 自動更新"
+    },
+    "creators-page": {
+      "nodeId": "14:212",
+      "label": "Page / Creators",
+      "codeId": null,
+      "codeTargets": [],
+      "note": "Page Template 參考用"
+    },
+    "partners-page": {
+      "nodeId": "17:160",
+      "label": "Page / Partners",
+      "codeId": null,
+      "codeTargets": [],
+      "note": "Page Template 參考用"
+    },
+    "articles-page": {
+      "nodeId": "15:255",
+      "label": "Page / Articles",
+      "codeId": null,
+      "codeTargets": [],
+      "note": "Page Template 參考用"
+    }
+  },
+  "sync": {
+    "mode": "figma-mcp",
+    "skill": ".agents/skills/figma-sync/SKILL.md",
+    "prompt": "同步 Figma 設計稿到 code（pilot scopes 見 figma-config.json）",
+    "buildCommand": "npm run build"
+  },
+  "tokensStudio": {
+    "installed": false,
+    "optional": true,
+    "exportPath": "design-tokens/",
+    "installUrl": "https://tokens.studio/plugin"
+  }
+}
