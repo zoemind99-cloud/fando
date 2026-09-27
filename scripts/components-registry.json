@@ -232,9 +232,10 @@
       "category": "content",
       "description": "創作者團購文章卡片",
       "variants": ["default"],
-      "cssClasses": ["article-card", "article-card__cover", "article-card__badge", "article-card__body", "article-card__meta", "article-card__title", "article-card__excerpt", "article-card__footer"],
+      "cssClasses": ["article-card", "article-card__cover", "article-card__body", "article-card__meta", "article-card__badge", "article-card__date", "article-card__title", "article-card__excerpt"],
       "figmaComponent": "Content / Article Card",
-      "usedOn": ["/articles"]
+      "usedOn": ["/articles"],
+      "notes": "Open layout: rounded cover image + unboxed meta/title/excerpt (not Astra single-block card)"
     },
     {
       "id": "category-chip",
